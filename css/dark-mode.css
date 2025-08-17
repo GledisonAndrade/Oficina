@@ -1,0 +1,58 @@
+:root {
+    --primary-color: #34495e;
+    --secondary-color: #2980b9;
+    --background-color: #2c3e50;
+    --text-color: #ecf0f1;
+    --card-color: #34495e;
+    --border-color: #4a6278;
+    --success-color: #2ecc71;
+    --warning-color: #f1c40f;
+    --danger-color: #e74c3c;
+    --info-color: #3498db;
+}
+
+body {
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.tab:not(.active) {
+    background-color: var(--background-color);
+}
+
+.service-item {
+    background-color: var(--primary-color);
+}
+
+.note-colors .selected {
+    border-color: var(--card-color);
+}
+
+.note-yellow {
+    background-color: rgba(241, 196, 15, 0.2);
+    border-left: 4px solid #f1c40f;
+}
+
+.note-blue {
+    background-color: rgba(52, 152, 219, 0.2);
+    border-left: 4px solid #3498db;
+}
+
+.note-green {
+    background-color: rgba(46, 204, 113, 0.2);
+    border-left: 4px solid #2ecc71;
+}
+
+.note-red {
+    background-color: rgba(231, 76, 60, 0.2);
+    border-left: 4px solid #e74c3c;
+}
+
+.note-purple {
+    background-color: rgba(155, 89, 182, 0.2);
+    border-left: 4px solid #9b59b6;
+}
+
+.note-orange {
+    background-color: rgba(230, 126, 34, 0.2);
+    border-left: 4px solid #e67e22;
+}
