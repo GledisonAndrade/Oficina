@@ -209,6 +209,14 @@ textarea {
     padding-bottom: 0.5rem;
 }
 
+.card-subtitle {
+    font-size: 1rem;
+    color: var(--secondary-color);
+    margin-bottom: 0.5rem;
+    padding-top: 1rem;
+    border-top: 1px solid var(--border-color);
+}
+
 .service-list {
     list-style: none;
 }
@@ -323,6 +331,36 @@ textarea {
     background-color: #e67e22;
 }
 
+.note-yellow {
+    background-color: rgba(241, 196, 15, 0.1);
+    border-left: 4px solid #f1c40f;
+}
+
+.note-blue {
+    background-color: rgba(52, 152, 219, 0.1);
+    border-left: 4px solid #3498db;
+}
+
+.note-green {
+    background-color: rgba(46, 204, 113, 0.1);
+    border-left: 4px solid #2ecc71;
+}
+
+.note-red {
+    background-color: rgba(231, 76, 60, 0.1);
+    border-left: 4px solid #e74c3c;
+}
+
+.note-purple {
+    background-color: rgba(155, 89, 182, 0.1);
+    border-left: 4px solid #9b59b6;
+}
+
+.note-orange {
+    background-color: rgba(230, 126, 34, 0.1);
+    border-left: 4px solid #e67e22;
+}
+
 .modal {
     display: none;
     position: fixed;
@@ -375,34 +413,75 @@ footer {
     font-size: 0.9rem;
 }
 
-.note-yellow {
-    background-color: rgba(241, 196, 15, 0.1);
-    border-left: 4px solid #f1c40f;
+/* Classes utilitárias */
+.mt-3 {
+    margin-top: 1rem;
 }
 
-.note-blue {
-    background-color: rgba(52, 152, 219, 0.1);
-    border-left: 4px solid #3498db;
+.justify-end {
+    justify-content: flex-end;
 }
 
-.note-green {
-    background-color: rgba(46, 204, 113, 0.1);
-    border-left: 4px solid #2ecc71;
+.p-1 {
+    padding: 0.5rem;
 }
 
-.note-red {
-    background-color: rgba(231, 76, 60, 0.1);
-    border-left: 4px solid #e74c3c;
+/* Estilos para os botões de ação */
+.service-item .form-row {
+    display: flex;
+    gap: 0.5rem;
+    margin-top: 1rem;
 }
 
-.note-purple {
-    background-color: rgba(155, 89, 182, 0.1);
-    border-left: 4px solid #9b59b6;
+.service-item .form-row button {
+    padding: 0.5rem 0.75rem;
+    font-size: 0.85rem;
 }
 
-.note-orange {
-    background-color: rgba(230, 126, 34, 0.1);
-    border-left: 4px solid #e67e22;
+.generate-pdf {
+    padding: 0.5rem 1rem;
+    font-size: 0.9rem;
+}
+
+/* Estilos para o modal de edição */
+#edit-service-modal .modal-content {
+    max-width: 800px;
+    max-height: 90vh;
+    overflow-y: auto;
+}
+
+#edit-service-modal .form-group {
+    margin-bottom: 1rem;
+}
+
+#edit-service-modal .note-colors {
+    margin-bottom: 1rem;
+}
+
+/* Estilos para gerenciamento de mecânicos */
+#mechanics-list {
+    max-height: 300px;
+    overflow-y: auto;
+}
+
+#mechanics-list .service-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#mechanics-list .form-row {
+    margin-top: 0.5rem;
+    justify-content: flex-end;
+}
+
+#mechanics-list .form-row button {
+    padding: 0.25rem 0.5rem;
+    font-size: 0.9rem;
+}
+
+#add-mechanic-form {
+    margin-top: 1rem;
 }
 
 /* Mobile First Adjustments */
@@ -441,32 +520,6 @@ footer {
     }
 }
 
-/* Estilos para gerenciamento de mecânicos */
-#mechanics-list {
-    max-height: 300px;
-    overflow-y: auto;
-}
-
-#mechanics-list .service-item {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-#mechanics-list .form-row {
-    margin-top: 0.5rem;
-    justify-content: flex-end;
-}
-
-#mechanics-list .form-row button {
-    padding: 0.25rem 0.5rem;
-    font-size: 0.9rem;
-}
-
-#add-mechanic-form {
-    margin-top: 1rem;
-}
-
 /* Melhorias para mobile */
 @media (max-width: 768px) {
     #mechanics-list .service-item {
@@ -478,29 +531,13 @@ footer {
         width: 100%;
         justify-content: space-between;
         margin-top: 0.5rem;
-        .card-subtitle {
-    font-size: 1rem;
-    color: var(--secondary-color);
-    margin-bottom: 0.5rem;
-    padding-top: 1rem;
-    border-top: 1px solid var(--border-color);
-}
-
-.mt-3 {
-    margin-top: 1rem;
-}
-
-.justify-end {
-    justify-content: flex-end;
-}
-
-.p-1 {
-    padding: 0.5rem;
-}
-
-.generate-pdf {
-    padding: 0.5rem 1rem;
-    font-size: 0.9rem;
-}
+    }
+    
+    .service-item .form-row {
+        flex-direction: column;
+    }
+    
+    .service-item .form-row button {
+        width: 100%;
     }
 }
